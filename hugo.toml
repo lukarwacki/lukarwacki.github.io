@@ -1,4 +1,4 @@
-baseURL = 'https://lukarwacki.github.io/'
+baseURL = 'https://lukarwacki.com'
 languageCode = 'en-us'
 title = 'Lukasz Karwacki'
 theme = 'shibui'
