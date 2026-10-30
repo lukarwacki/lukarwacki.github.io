@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<section id="about">
+  <h2>About</h2>
+  <p>I’m a researcher at the University of Bonn working on AI alignment. My interests include scalable oversight, multi-agent systems, and applications of many-body physics to understanding neural networks.</p>
+  <p>Previously I was a researcher in theoretical physics (many-body physics, spintronics, quantum transport).</p>
+  <p>I also photograph, write stories, and dabble in music.</p>
+  <p><a href="https://scholar.google.com/citations?user=jLNp-qMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a> / <a href="https://www.linkedin.com/in/lukarwacki" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+</section>
+
+<section id="news">
+  <h2>News</h2>
+  {% assign items = site.news | sort: "date" | reverse %}
+  {% if items.size > 0 %}
+    {% for item in items %}
+      <article class="news-item">
+<p> <div class="item-content">{{ item.date | date: "%Y-%m-%d" }}{{ item.content | markdownify }}</div></p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <p>Updates will appear here.</p>
+  {% endif %}
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  {% assign areas = "AI Alignment|Computational Neuroscience|Physics" | split: "|" %}
+  {% for area in areas %}
+    {% assign area_items = site.publications | where: "area", area | sort: "date" | reverse %}
+    {% if area_items.size > 0 %}
+      <p><b>{{ area }}</b></p>
+      {% for item in area_items %}
+        <p>- 
+          {% if item.url %}
+            <a class="pub-title" href="{{ item.url | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a>
+          {% else %}
+            <span class="pub-title">{{ item.title | escape }}</span>
+          {% endif %}
+          — <em>{{ item.venue | escape }}</em> ({{ item.date | date: "%Y" }})
+        </p>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  <p><a href="https://scholar.google.com/citations?user=jLNp-qMAAAAJ" target="_blank" rel="noopener noreferrer">Full publication list</a></p>
+</section>
+
+<!-- <section id="projects">
+  <h2>Projects</h2>
+  {% assign items = site.projects | sort: "order" %}
+  {% for item in items %}
+    <article class="project-item">
+      <p>{{ item.title | escape }}</p>
+      {% if item.content != "" %}<div class="item-content">{{ item.content | markdownify }}</div>{% endif %}
+    </article>
+  {% endfor %}
+</section> -->

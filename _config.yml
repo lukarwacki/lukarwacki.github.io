@@ -1,0 +1,14 @@
+title: Łukasz Karwacki
+description: science of learning systems
+url: "https://lukarwacki.com"
+baseurl: ""
+markdown: kramdown
+collections:
+  news:
+    output: false
+  publications:
+    output: false
+  projects:
+    output: false
+exclude:
+  - README.md

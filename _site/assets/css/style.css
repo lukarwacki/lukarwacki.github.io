@@ -1,0 +1,27 @@
+:root{color-scheme:dark;--bg:#171717;--fg:#dedede;--dim:#a0a0a0;--faint:#777}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.65 ui-monospace,"SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono",monospace;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:underline;text-decoration-color:#777;text-underline-offset:3px}
+a:hover{color:#fff;text-decoration-color:#fff}
+.wrap{width:min(100% - 40px,500px);margin:0 auto;min-height:100vh;display:flex;flex-direction:column}
+header{padding-top:58px}
+.brand{color:var(--fg);text-decoration:none;font-weight:600;letter-spacing:.01em}
+.brand:hover{text-decoration:underline}
+nav{display:flex;flex-wrap:wrap;gap:5px 12px;margin-top:24px;color:var(--faint);font-size:11px}
+nav a{text-decoration:none;color:var(--dim)}
+nav a:hover{color:#fff}
+main{padding-top:66px;flex:1}
+section{margin:0 0 42px;scroll-margin-top:20px}
+h2{font-size:13px;line-height:1.5;font-weight:700;margin:0 0 18px;color:var(--fg)}
+p{margin:0 0 10px;color:var(--dim)}
+p:last-child{margin-bottom:0}
+strong{color:var(--fg);font-weight:600}
+.news-item,.project-item{margin:0 0 14px}
+.news-item:last-child,.project-item:last-child{margin-bottom:0}
+.pub-title{color:var(--fg)}
+.item-content p{margin:0 0 10px}
+.item-content p:last-child{margin-bottom:0}
+footer{padding:32px 0 45px;text-align:center;color:var(--dim);font-size:11px}
+@media(max-width:560px){header{padding-top:34px}main{padding-top:54px}section{margin-bottom:36px}footer{padding-bottom:30px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

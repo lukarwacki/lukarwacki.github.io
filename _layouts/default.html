@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <meta name="theme-color" content="#171717">
+  <title>{{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="{{ '/' | relative_url }}">Łukasz Karwacki</a>
+      <!-- <nav aria-label="Sections">
+        <a href="#about">/ about</a><a href="#news">/ news</a><a href="#publications">/ publications</a><a href="#projects">/ projects</a><a href="#contact">/ contact</a>
+      </nav> -->
+    </header>
+    <main id="top">{{ content }}</main>
+    <footer>© Lukasz Karwacki 2026</footer>
+  </div>
+</body>
+</html>
