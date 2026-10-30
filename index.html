@@ -33,7 +33,7 @@ layout: default
       {% for item in area_items %}
         <p>- 
           {% if item.url %}
-            <a class="pub-title" href="{{ item.url | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a>
+            <a class="pub-title" href="{{ item.p_url | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a>
           {% else %}
             <span class="pub-title">{{ item.title | escape }}</span>
           {% endif %}
